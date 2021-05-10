@@ -52,6 +52,16 @@ def login():
         return redirect(next_page) # send user back home
     return render_template('login.html', title='Sign In', form=form)
 
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    scores = [
+        {'author': user, 'score': '55.55 {0}'.format('WPM')},
+        {'author': user, 'score': '77.77 {0}'.format('WPM')}
+    ]
+    return render_template('user.html', user=user, scores=scores)
+
 @app.route('/logout')
 def logout():
     logout_user()

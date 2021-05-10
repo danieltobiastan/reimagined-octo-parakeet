@@ -23,8 +23,9 @@ class User(UserMixin, db.Model):
 
 class Score(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    score = db.Column(db.Float, index=True, nullable=True)
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    score = db.Column(db.Float, index=True, nullable=True) #WPM 
+    #accuracy column
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow) # Time that score logged
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):

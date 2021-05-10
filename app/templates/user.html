@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Scores</title>
+    <title>{{ current_user.username }}</title>
 {% endblock %}
 
 {% block head %} 
@@ -9,9 +9,11 @@
 {% endblock %}
 
 {% block content %}
-    <body>
-        <div class='container'>
-            <h1>Scores</h1>
-        </div>
-    </body>
+    <h1>User: {{ user.username }}</h1>
+    <hr>
+    {% for score in scores %}
+    <p>
+    {{ score.author.username }} scored: <b>{{ score.score }}</b>
+    </p>
+    {% endfor %}
 {% endblock %}

@@ -4,7 +4,61 @@
     <title>Typing - Home</title>
 {% endblock %}
 
-{% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-    <p>Start game</p>
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/game.css') }}">
+{% endblock %}
+
+{% block content %}           
+    {% if current_user.is_anonymous %}
+        <h1>Welcome to key.stroke!</h1>
+        <p>A typing game</p>
+    {% else %}
+        <p>Welcome back, {{ current_user.username }}</p>
+    {% endif %}
+    <body>
+        <div class="container">
+          <div class="border">
+          <div class="header">
+      
+            <div class="wpm">
+              <div class="head">Words/min</div>
+              <div class="init_wpm">100</div>
+            </div>
+            
+            <div class="errors">
+              <div class="head">Errors</div>
+              <div class="init_errors">0</div>
+            </div>
+            
+            <div class="timer">
+              <div class="head">Time(s)</div>
+              <div class="init_time">60</div>
+            </div>
+            
+            <div class="accuracy">
+              <div class="head">Accuracy(%)</div>
+              <div class="init_accuracy">100</div>
+            </div>
+          </div>
+          </div>
+      
+          <div class="content" style="display: block;">
+            Click on the area below to start 
+          </div>
+           <textarea class="input_box" placeholder="Start typing..." oninput="textInput()"
+            onfocus="startGame()"></textarea>
+          <div>
+            <button class="restart" onclick="resetGame()">Restart Test</button>
+          </div>
+          </div>
+      </body>
+      <script src="{{url_for('static', filename='javascript/game.js')}}"></script>
+
+    {% if current_user.is_anonymous %}
+      <p><a href="{{ url_for('login') }}"><u>Login</u></a> to save results</p>
+    {% else %}
+      <h1>{{ current_user.username }}</h1>
+      <p> Show Previous Scores</p>
+    {% endif %}
 {% endblock %}
