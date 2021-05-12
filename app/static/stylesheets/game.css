@@ -29,6 +29,7 @@ body {
 .timer, .errors,
 .accuracy, .cpm, .wpm {
   background-color:white;
+  color: black;
   height: 60px;
   width: 70px;
   margin: 8px;
@@ -62,6 +63,7 @@ body {
 
 .content {
   background-color: white;
+  color: black;
   font-weight: bolder;
   margin: 10px;
   padding: 25px;
