@@ -1,15 +1,15 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, make_response, jsonify
 from app import app, db # imports the app and db from init
 from app.forms import LoginForm, RegisterForm # import form classes to be used here
 from flask_login import current_user, login_user, logout_user, login_required 
 from werkzeug.urls import url_parse
-from app.models import User # imports the user class 
+from app.models import User, Score # imports the user class 
+import json 
 # will need to import the scores class to commit the data here also
 
 # home page, where game resides (undone - waiting to commit with actual app)
 # then log the scores into the scores database
-@app.route('/')
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('home.html')
 
@@ -66,3 +66,16 @@ def user(username):
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+@app.route('/scoreupload', methods=['POST'])
+def create_score():
+    score_item = request.get_json()
+    username = json.dumps(score_item[0].get("username")).strip('"')
+    score = json.dumps(score_item[0].get("score")).strip('"')
+    accuracy = json.dumps(score_item[0].get("accuracy")).strip('"')
+    user_id = json.dumps(score_item[0].get("user_id")).strip('"')
+    new_score = Score(username=username, score=float(score), accuracy=float(accuracy), user_id=int(user_id))
+    db.session.add(new_score)
+    db.session.commit()
+    resp = make_response(jsonify({"message":"JSON Received"}), 200) # not neccesary code 
+    return (resp) # not neccesary 

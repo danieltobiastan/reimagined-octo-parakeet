@@ -22,6 +22,8 @@ let wpm_group = document.querySelector(".wpm");
 let error_group = document.querySelector(".errors");
 let accuracy_group = document.querySelector(".accuracy");
 let read_me = document.querySelector(".readme")
+let user_name = document.getElementById("username")
+let user_id = document.getElementById("userid")
 
 let time_left = 60;
 let time_passed = 0;
@@ -96,9 +98,26 @@ function finishGame() {
   wpm = (((((typed - (total_errors + errors)) / 5) / time_passed) * 60)).toFixed(2); // assume word is 5char? 
   words_text.textContent = Math.round(wpm); // -- extract this - database
   wpm_group.style.display = "block";
-  read_me.innerText = wpm + ' ' + accuracy_text.innerText;
-}
+  submitScore();
+};
 
+function submitScore() {
+  var score = [{
+    username:user_name.innerText,
+    score: wpm,
+    accuracy: accuracy_text.innerText,
+    user_id: user_id.innerText
+  }];
+  fetch(`${window.origin}/scoreupload`, {
+    method: "POST",
+    credentials: "include",
+    body: JSON.stringify(score),
+    cache: "no-cache",
+    headers: new Headers({
+      "content-type": "application/json"
+    })
+  })
+}
 
 function startGame() {
   content_text.style.display="block";
@@ -108,7 +127,7 @@ function startGame() {
 }
 
 function resetGame() {
-  time_left = 5;
+  time_left = 10; // changed to lower number for testing
   time_passed = 0;
   errors = 0;
   total_errors = 0;
