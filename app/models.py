@@ -23,8 +23,9 @@ class User(UserMixin, db.Model):
 
 class Score(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64))
     score = db.Column(db.Float, index=True, nullable=True) #WPM 
-    #accuracy column
+    accuracy = db.Column(db.Float, index=True, nullable=True) #accuracy
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow) # Time that score logged
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
@@ -45,3 +46,5 @@ class Score(db.Model):
 #>>> db.session.commit()
 
 #select user_id, username, score from User,Score where User.id  == Score.user_id; (see all records)
+
+# need to get a json file of user_id, score, timestamp and accracy

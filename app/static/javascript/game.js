@@ -21,6 +21,7 @@ let restart_btn = document.querySelector(".restart");
 let wpm_group = document.querySelector(".wpm");
 let error_group = document.querySelector(".errors");
 let accuracy_group = document.querySelector(".accuracy");
+let read_me = document.querySelector(".readme")
 
 let time_left = 60;
 let time_passed = 0;
@@ -67,7 +68,7 @@ function textInput() {
   error_text.textContent = total_errors + errors; // so becomes 0 + whatever error++ is
   let correctCharacters = (typed - (total_errors + errors)); //
   let accuracyData = ((correctCharacters / typed) * 100); // 
-  accuracy_text.textContent = Math.round(accuracyData); // rounds the accuracy score -- extract this
+  accuracy_text.textContent = (accuracyData).toFixed(1); // rounds the accuracy score -- (extract this)
 
   if (input.length == current_content.length) { // resets the text when all words typed
     ChangeContent();
@@ -91,38 +92,42 @@ function finishGame() {
   clearInterval(timer)
   input_box.disabled = true;
   content_text.style.display='none';
-  input_box.style.display='hidden'; // added to remove text box also 
-  wpm = Math.round((((typed / 5) / time_passed) * 60)); // assume word is 5char? 
-  words_text.textContent = wpm; // -- extract this
+  input_box.style.display='none'; // added to remove text box also 
+  wpm = (((((typed - (total_errors + errors)) / 5) / time_passed) * 60)).toFixed(2); // assume word is 5char? 
+  words_text.textContent = Math.round(wpm); // -- extract this - database
   wpm_group.style.display = "block";
+  read_me.innerText = wpm + ' ' + accuracy_text.innerText;
 }
 
 
 function startGame() {
   content_text.style.display="block";
+  input_box.style.display='block';
   resetGame();
-  ChangeContent();
-  clearInterval(timer);
   timer = setInterval(updateTimer, 1000);
 }
 
 function resetGame() {
-  time_left = 60;
+  time_left = 5;
   time_passed = 0;
   errors = 0;
   total_errors = 0;
   accuracy = 0;
   typed = 0;
   c = 0;
+  ChangeContent();
+  clearInterval(timer);
   input_box.disabled = false;
   input_box.value = "";
-  content_text.textContent = "";
   accuracy_text.textContent = 100;
   timer_text.textContent = time_left;
   error_text.textContent = 0;
   restart_btn.style.display = "block";
-  wpm_group.style.display = "none";
 }
+
+function setFocusToTextBox(){
+  input_box.focus();
+};
 
 function getRandomNumberColor() {
   return Math.floor(Math.random() * colors.length);

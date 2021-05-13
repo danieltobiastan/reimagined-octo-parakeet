@@ -66,6 +66,9 @@ body {
   color: black;
   font-weight: bolder;
   margin: 10px;
+  height: 80px;
+  width: 40%;
+  font-size: 1.4rem;
   padding: 25px;
   box-shadow: grey 5px 8px 5px;
   border-radius: 10px 10px 10px 10px;
