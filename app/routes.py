@@ -25,12 +25,17 @@ def scores():
         myScore = Score.query.filter_by(user_id=user_iden).all()
         wpm, accuracy, count = 0,0,0
         for score in myScore:
+            high_score = 0
+            if (score.score > high_score):
+                high_score = score.score
             count += 1
             accuracy += score.accuracy
             wpm += score.score
         avg_wpm, avg_accuracy = (format((wpm/count), '.2f')), (format((accuracy/count), '.2f'))
-        #print(avg_wpm, avg_accuracy)
-    return render_template('scores.html', username = user_username, user_id=user_iden, myScore=myScore, count=count, avg_wpm=avg_wpm, avg_accuracy=avg_accuracy)
+
+        #top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
+        #print(top10Score)
+    return render_template('scores.html', username = user_username, user_id=user_iden, myScore=myScore, count=count, avg_wpm=avg_wpm, avg_accuracy=avg_accuracy, high_score=high_score)
 
 # registration page - linked with database, left with design
 @app.route('/register', methods=['GET','POST']) 
