@@ -11,7 +11,36 @@
 {% block content %}
     <body>
         <div class='container'>
-            <h1>Scores</h1>
+            <h1>Scores - {{ username }}</h1>
         </div>
+
+        <table id='summary'>
+            <tr>
+                <th>Games Played</th>
+                <th>High Score</th>
+                <th>Average WPM</th>
+                <th>Average Accuracy</th>
+            </tr>
+            <tr>
+                <td>{{ count }}</td>
+                <td style="color: red">{{ high_score }}</td>
+                <td>{{ avg_wpm }}</td>
+                <td>{{ avg_accuracy }}</td>
+            </tr>
+        </table>
+
+        <table id='records'>
+            <tr>
+                <th>Username</th>
+                <th>WPM</th>
+                <th>Accuracy</th>
+            </tr>
+        {% for score in myScore %}
+            <tr>
+                <td>{{ score.username }}</td>
+                <td>{{ score.score  }}</td>
+                <td>{{ score.accuracy }}</td>
+        {% endfor %}
+        </table>
     </body>
 {% endblock %}
