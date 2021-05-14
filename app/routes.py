@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request, make_response, jsonify
+from flask import render_template, flash, redirect, url_for, request, make_response, jsonify, g, session
 from app import app, db # imports the app and db from init
 from app.forms import LoginForm, RegisterForm # import form classes to be used here
 from flask_login import current_user, login_user, logout_user, login_required 
@@ -9,15 +9,28 @@ import json
 
 # home page, where game resides (undone - waiting to commit with actual app)
 # then log the scores into the scores database
+
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('home.html')
 
 # score page, users can see scores (undone)
-@app.route('/scores')
+@app.route('/scores', methods=['GET','POST'])
 @login_required
 def scores():
-    return render_template('scores.html')
+    if current_user.is_authenticated: 
+        user_username = current_user.username
+        user_iden = current_user.id
+        myScore = Score.query.filter_by(user_id=user_iden).all()
+        wpm, accuracy, count = 0,0,0
+        for score in myScore:
+            count += 1
+            accuracy += score.accuracy
+            wpm += score.score
+        avg_wpm, avg_accuracy = (format((wpm/count), '.2f')), (format((accuracy/count), '.2f'))
+        #print(avg_wpm, avg_accuracy)
+    return render_template('scores.html', username = user_username, user_id=user_iden, myScore=myScore, count=count, avg_wpm=avg_wpm, avg_accuracy=avg_accuracy)
 
 # registration page - linked with database, left with design
 @app.route('/register', methods=['GET','POST']) 

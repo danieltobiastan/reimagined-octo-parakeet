@@ -11,7 +11,23 @@
 {% block content %}
     <body>
         <div class='container'>
-            <h1>Scores</h1>
+            <h1>Scores - {{ username }}</h1>
+            <h3>Games Played = {{ count }}</h3>
+            <h3>Average WPM = {{ avg_wpm }}</h3>
+            <h3>Average Accuracy = {{ avg_accuracy }}</h3>
         </div>
+        <table id='rec'>
+            <tr>
+                <th>Username</th>
+                <th>WPM</th>
+                <th>Accuracy</th>
+            </tr>
+        {% for score in myScore %}
+            <tr>
+                <td>{{ score.username }}</td>
+                <td>{{ score.score  }}</td>
+                <td>{{ score.accuracy }}</td>
+        {% endfor %}
+        </table>
     </body>
 {% endblock %}
