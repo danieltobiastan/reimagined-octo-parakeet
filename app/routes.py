@@ -23,9 +23,8 @@ def scores():
         user_username = current_user.username
         user_iden = current_user.id
         myScore = Score.query.filter_by(user_id=user_iden).all()
-        wpm, accuracy, count = 0,0,0
+        wpm, accuracy, count, high_score= 0,0,0,0
         for score in myScore:
-            high_score = 0
             if (score.score > high_score):
                 high_score = score.score
             count += 1
@@ -97,3 +96,4 @@ def create_score():
     db.session.commit()
     resp = make_response(jsonify({"message":"JSON Received"}), 200) # not neccesary code 
     return (resp) # not neccesary 
+
