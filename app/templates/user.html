@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>{{ current_user.username }}</title>
+{% endblock %}
+
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>User: {{ user.username }}</h1>
+    <hr>
+    {% for score in scores %}
+    <p>
+    {{ score.author.username }} scored: <b>{{ score.score }}</b>
+    </p>
+    {% endfor %}
+{% endblock %}

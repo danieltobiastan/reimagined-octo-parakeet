@@ -4,6 +4,10 @@
     <title>Typing - Register</title>
 {% endblock %}
 
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+{% endblock %}
+
 {% block content %}
     <h1>Register</h1>
     <form action="/register" method="POST" novalidate>

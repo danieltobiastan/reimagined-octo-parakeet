@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/daniel/projects/flask project"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "typingproject"
+	}
+}
