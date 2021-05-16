@@ -11,11 +11,8 @@
 
 {% block content %}
     <body>
+        <h1>Scores</h1>
         <div class='container'>
-            <h1>Scores</h1>
-        </div>
-
-        <div class='tble'>
             <table id='records'>
                 <caption>Your Top 10 Scores</caption>
                 <tr>
@@ -28,6 +25,7 @@
                     <td>{{ score.username }}</td>
                     <td>{{ score.score  }}</td>
                     <td>{{ score.accuracy }}</td>
+                </tr>
             {% endfor %}
             </table>
             <table id='global'>
@@ -42,6 +40,7 @@
                         <td>{{ score.username }}</td>
                         <td>{{ score.score  }}</td>
                         <td>{{ score.accuracy }}</td>
+                    </tr>
                 {% endfor %}
                 </table>
         </div>

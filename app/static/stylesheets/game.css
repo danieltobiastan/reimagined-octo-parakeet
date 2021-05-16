@@ -29,23 +29,23 @@ body {
   height: 40px;
   width: 60px;
   margin: 8px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .head {
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 10px;
-  font-weight: 600;
   color: rgb(128, 185, 238);
-  font-weight: bolder;
   padding: 2px;
 }
 
 .errors{
-  color: red;
+  color: rgb(230, 126, 126);
 }
 .wpm{
-  color: rgb(16, 197, 16);
+  color: rgb(231, 204, 114);
 }
 .wpm  {
   display: none;
@@ -57,44 +57,52 @@ body {
 }
 
 .content {
+  background-color: rgb(14, 36, 56);
   color: rgb(128, 185, 238);
-  font-weight: bolder;
+  word-spacing: 4px;
   margin: 10px;
   height: 80px;
-  width: 18cm;
-  font-size: 1.4rem;
-  padding: 25px;
-  box-shadow: grey 5px 8px 5px;
-  border-radius: 10px 10px 10px 10px;
+  width: 60%;
+  font-size: 1rem;
+  padding: 10px;
+  line-height: 1.4;
 }
-
-.input_box {
-  background-color: rgb(128, 185, 238);
-  font-weight: bolder;
-  height: 80px;
-  width: 18.5cm;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  margin: 15px;
-  padding: 15px;
-  border: 0px;
-  border-radius: 3px 3px 3px 3px;
-}
-
 
 .correct{
-  color: rgb(82, 200, 82);
+  color: rgb(238, 217, 158);
+}
+.incorrect{
+  color:rgb(235, 137, 137);
+  text-decoration: underline;
 }
 
 .restart {
   display: block;
   background-color: rgb(128, 185, 238);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: 'Anonymous Pro', monospace;
-  padding: 10px;
+  padding: 12px 15px;
+  margin-top: 15px;
   border: 0px;
-  color: rgb(14, 36, 56);
+  color: rgb(128, 185, 238);
+  background-color: rgb(14, 36, 56);
   border-radius: 3px 3px 3px 3px;
   width: 100%;
+}
+
+.restart:hover {
   font-weight: bolder;
+}
+
+.input_box {
+  height: 100%;
+  background-color: transparent;
+  color: transparent;
+  height:1px;
+  width:1px;
+  align-items: center;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }

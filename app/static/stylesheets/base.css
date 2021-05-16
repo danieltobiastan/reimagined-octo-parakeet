@@ -5,18 +5,12 @@
     font-family: 'Anonymous Pro', monospace;
     word-spacing: 1em;
     display: flex;
-    font-weight: bolder;
 }
 
 .logo {
     color: rgb(128, 185, 238);
     font-size: 25px;
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-    width: 138px 
+    margin: 0 0 0 auto;
 }
 
 a, a:hover {
@@ -24,9 +18,3 @@ a, a:hover {
     text-decoration: none
   }
 
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Anonymous Pro', monospace; 
-    text-align: center
-}

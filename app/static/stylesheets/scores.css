@@ -1,11 +1,17 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: rgb(14, 36, 56);
+    color: rgb(128, 185, 238);
+    text-align: center;
     font-family: 'Anonymous Pro', monospace; 
 }
 
-table, th, td{
-    border: 4px solid white;
+h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+table, th, td {
     border-collapse: collapse;
     padding: 5px;
 }
@@ -14,27 +20,11 @@ td {
     padding: 5px;
 }
 
-#summary, #scores {
+#summary, #records {
     margin: 30px auto;
     padding: 3cm;
 }
 
 .container {
-    text-align: center
+  column-count: 2;
 }
-
-.tble {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-}
-
-#records{
-    margin: 30px auto;
-    float: left;
-}
-
-#global {
-    margin: 30px auto;
-    }
