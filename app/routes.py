@@ -11,6 +11,9 @@ import json
 # then log the scores into the scores database
 
 @app.route('/', methods=['GET', 'POST'])
+def base():
+    return render_template('frontpage.html')
+
 @app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('home.html')
@@ -23,13 +26,15 @@ def scores():
         user_username = current_user.username
         user_iden = current_user.id
         top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
+        myScore = Score.query.filter_by(user_id=user_iden).all()
         wpm, accuracy, count, high_score= 0,0,0,0
+        for allscore in myScore:
+            count += 1
+            accuracy += allscore.accuracy
+            wpm += allscore.score
         for score in top10Score:
             if (score.score > high_score):
                 high_score = score.score
-            count += 1
-            accuracy += score.accuracy
-            wpm += score.score
         avg_wpm, avg_accuracy = (format((wpm/count), '.2f')), (format((accuracy/count), '.2f'))
         #myScore = Score.query.filter_by(user_id=user_iden).all()
         #top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
