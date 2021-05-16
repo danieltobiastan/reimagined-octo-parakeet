@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: rgb(14, 36, 56);
+  color: rgb(128, 185, 238);
   text-align: center;
   font-family: 'Anonymous Pro', monospace; 
 }
@@ -11,14 +11,11 @@ body {
   align-items: center;
 }
 
-
 .title {
-  margin-bottom: 20px;
-  font-size: 3rem;
-  color: whitesmoke;
+  margin-bottom: 10px;
+  font-size: 2rem;
   width: 100%;
   height: auto;
-  background-color: skyblue;
 }
 
 .header {
@@ -28,14 +25,20 @@ body {
 
 .timer, .errors,
 .accuracy, .cpm, .wpm {
-  background-color:white;
-  color: black;
-  height: 60px;
-  width: 70px;
+  color: rgb(128, 185, 238);
+  height: 40px;
+  width: 60px;
   margin: 8px;
-  padding: 12px;
-  border-radius: 20%;
-  box-shadow: grey 5px 8px 5px;
+  padding: 10px;
+}
+
+.head {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(128, 185, 238);
+  font-weight: bolder;
+  padding: 2px;
 }
 
 .errors{
@@ -48,22 +51,13 @@ body {
   display: none;
 }
 
-.head {
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 600;
-  color: skyblue;
-  font-weight: bolder;
-}
-
 .init_time, .init_errors,
 .init_accuracy, .init_wpm {
   font-size: 35px;
 }
 
 .content {
-  background-color: white;
-  color: black;
+  color: rgb(128, 185, 238);
   font-weight: bolder;
   margin: 10px;
   height: 80px;
@@ -75,17 +69,16 @@ body {
 }
 
 .input_box {
-  background-color: white;
+  background-color: rgb(128, 185, 238);
   font-weight: bolder;
   height: 80px;
   width: 18.5cm;
   font-size: 1.5rem;
-  font-weight: 600;
-  margin: 10px;
+  font-weight: bolder;
+  margin: 15px;
   padding: 15px;
   border: 0px;
-  box-shadow: grey 5px 8px 5px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 3px 3px 3px 3px;
 }
 
 
@@ -95,12 +88,13 @@ body {
 
 .restart {
   display: block;
-  background-color: skyblue;
-  font-size: 1.5rem;
+  background-color: rgb(128, 185, 238);
+  font-size: 0.8rem;
+  font-family: 'Anonymous Pro', monospace;
   padding: 10px;
   border: 0px;
-  color: whitesmoke;
-  border-radius: 10px 10px 10px 10px;
+  color: rgb(14, 36, 56);
+  border-radius: 3px 3px 3px 3px;
   width: 100%;
-  font-weight: bold;
+  font-weight: bolder;
 }
