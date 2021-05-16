@@ -1,20 +1,21 @@
 .topnav {
     height: 1em;
-    background-color: #181818;
+    background-color: rgb(14, 36, 56);
     padding: 1em;
     font-family: 'Anonymous Pro', monospace;
     word-spacing: 1em;
     display: flex;
+    font-weight: bolder;
 }
 
 .logo {
-    color: white;
+    color: rgb(128, 185, 238);
     font-size: 25px;
     margin: 0 0 0 auto;
 }
 
 a, a:hover {
-    color: white;
+    color: rgb(128, 185, 238);
     text-decoration: none
   }
 

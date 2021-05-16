@@ -12,10 +12,8 @@
 {% block content %}           
     {% if current_user.is_anonymous %}
         <h1>Welcome to key.stroke!</h1>
-        <p>A typing game</p>
     {% else %}
-        <p>Welcome back,</p>
-        <p id="username">{{ current_user.username }}</p>
+        <p id="username">Welcome back, {{ current_user.username }}!</p>
         <h3 hidden id="userid">{{ current_user.id }}</h3>
     {% endif %}
     <body>
@@ -46,11 +44,11 @@
           </div>
       
           <div class="content" style="display: block;">
-            Click on restart test to start 
+            Click 'Begin' to start.
           </div>
            <textarea class="input_box" placeholder="Start typing..." oninput="textInput()"></textarea>
           <div>
-            <button class="restart" onclick="startGame(); setFocusToTextBox();">Restart Test<br>tab + return</button> 
+            <button class="restart" onclick="startGame(); setFocusToTextBox();">Begin</button> 
           </div>
           </div>
       </body>
