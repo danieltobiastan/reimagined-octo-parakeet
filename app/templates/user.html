@@ -6,14 +6,45 @@
 
 {% block head %} 
 <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/scores.css') }}">
 {% endblock %}
 
 {% block content %}
-    <h1>User: {{ user.username }}</h1>
-    <hr>
-    {% for score in scores %}
-    <p>
-    {{ score.author.username }} scored: <b>{{ score.score }}</b>
-    </p>
-    {% endfor %}
+    <body>
+        <div class='container'>
+            <h1>Scores</h1>
+            <h2>{{ username }}</h2>
+        </div>
+
+        <table id='summary'>
+            <caption>Summary</caption>
+            <tr>
+                <th>Games Played</th>
+                <th>High Score</th>
+                <th>Average WPM</th>
+                <th>Average Accuracy</th>
+            </tr>
+            <tr>
+                <td>{{ count }}</td>
+                <td style="color: red">{{ high_score }}</td>
+                <td>{{ avg_wpm }}</td>
+                <td>{{ avg_accuracy }}</td>
+            </tr>
+        </table>
+
+        <table id='scores'>
+            <caption>Top 10 Scores</caption>
+            <tr>
+                <th>Username</th>
+                <th>WPM</th>
+                <th>Accuracy</th>
+            </tr>
+        {% for score in myScore %}
+            <tr>
+                <td>{{ score.username }}</td>
+                <td>{{ score.score  }}</td>
+                <td>{{ score.accuracy }}</td>
+        {% endfor %}
+        </table>
+    </body>
 {% endblock %}

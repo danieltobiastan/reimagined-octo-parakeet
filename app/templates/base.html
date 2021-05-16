@@ -13,7 +13,7 @@
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('scores') }}">Scores</a>
         </div>
-        <span class="logo" style="align-self: center"><a href="{{ url_for('home') }}">key.stroke</a></span>
+        <span class="logo"><a href="{{ url_for('home') }}">key.stroke</a></span>
         <div class='topnav-right' style="margin-left: auto; order: 2">
             {% if current_user.is_anonymous %}
                 <a href="{{ url_for('register') }}">Register</a>

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Home</title>
+    <title>key.stroke</title>
 {% endblock %}
 
 {% block head %} 
@@ -14,7 +14,7 @@
         <h1>Welcome to key.stroke!</h1>
         <p>A typing game</p>
     {% else %}
-        <p>Welcome back,</p>
+        <h1>Welcome back</h1>
         <p id="username">{{ current_user.username }}</p>
         <h3 hidden id="userid">{{ current_user.id }}</h3>
     {% endif %}
@@ -58,7 +58,5 @@
     {% if current_user.is_anonymous %}
       <p><a href="{{ url_for('login') }}"><u>Login</u></a> to save results</p>
     {% else %}
-      <h1>{{ current_user.username }}</h1>
-      <p> Show Previous Scores</p>
     {% endif %}
 {% endblock %}

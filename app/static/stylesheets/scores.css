@@ -14,7 +14,7 @@ td {
     padding: 5px;
 }
 
-#summary, #records {
+#summary, #scores {
     margin: 30px auto;
     padding: 3cm;
 }
@@ -22,3 +22,19 @@ td {
 .container {
     text-align: center
 }
+
+.tble {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#records{
+    margin: 30px auto;
+    float: left;
+}
+
+#global {
+    margin: 30px auto;
+    }

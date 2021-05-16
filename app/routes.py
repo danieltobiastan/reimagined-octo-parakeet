@@ -26,20 +26,11 @@ def scores():
         user_username = current_user.username
         user_iden = current_user.id
         top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
-        myScore = Score.query.filter_by(user_id=user_iden).all()
-        wpm, accuracy, count, high_score= 0,0,0,0
-        for allscore in myScore:
-            count += 1
-            accuracy += allscore.accuracy
-            wpm += allscore.score
-        for score in top10Score:
-            if (score.score > high_score):
-                high_score = score.score
-        avg_wpm, avg_accuracy = (format((wpm/count), '.2f')), (format((accuracy/count), '.2f'))
+        globaltop10 = Score.query.order_by(Score.score.desc()).limit(10).all()
         #myScore = Score.query.filter_by(user_id=user_iden).all()
         #top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
         #print(top10Score)
-    return render_template('scores.html', username = user_username, user_id=user_iden, myScore=top10Score, count=count, avg_wpm=avg_wpm, avg_accuracy=avg_accuracy, high_score=high_score)
+    return render_template('scores.html', username = user_username, user_id=user_iden, myScore=top10Score, globaltop10=globaltop10)
 
 # registration page - linked with database, left with design
 @app.route('/register', methods=['GET','POST']) 
@@ -74,15 +65,33 @@ def login():
         return redirect(next_page) # send user back home
     return render_template('login.html', title='Sign In', form=form)
 
-@app.route('/user/<username>')
 @login_required
+@app.route('/user/<username>')
 def user(username):
-    user = User.query.filter_by(username=username).first_or_404()
-    scores = [
-        {'author': user, 'score': '55.55 {0}'.format('WPM')},
-        {'author': user, 'score': '77.77 {0}'.format('WPM')}
-    ]
-    return render_template('user.html', user=user, scores=scores)
+    if current_user.is_authenticated: 
+        user_username = current_user.username
+        user_iden = current_user.id
+        top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
+        myScore = Score.query.filter_by(user_id=user_iden).all()
+        wpm, accuracy, count, high_score= 0,0,0,0
+        for allscore in myScore:
+            count += 1
+            accuracy += allscore.accuracy
+            wpm += allscore.score
+        for score in top10Score:
+            if (score.score > high_score):
+                high_score = score.score
+        if count == 0:
+            noData = "No data logged! Please play a game"
+            avg_wpm, avg_accuracy = 0,0
+        else: 
+            avg_wpm, avg_accuracy = (format((wpm/count), '.2f')), (format((accuracy/count), '.2f'))
+    if not current_user.is_authenticated:
+        return render_template('notauthen.html')
+        #myScore = Score.query.filter_by(user_id=user_iden).all()
+        #top10Score = Score.query.filter_by(user_id=user_iden).order_by(Score.score.desc()).limit(10).all()
+        #print(top10Score)
+    return render_template('user.html', username = user_username, user_id=user_iden, myScore=top10Score, count=count, avg_wpm=avg_wpm, avg_accuracy=avg_accuracy, high_score=high_score)
 
 @app.route('/logout')
 def logout():
@@ -102,3 +111,6 @@ def create_score():
     resp = make_response(jsonify({"message":"JSON Received"}), 200) # not neccesary code 
     return (resp) # not neccesary 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404

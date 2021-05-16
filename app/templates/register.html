@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Register</title>
+    <title>Register</title>
 {% endblock %}
 
 {% block head %} 
@@ -41,5 +41,6 @@
             {% endfor %}
         </p>
         <p>{{ form.submit() }}</p>
+        <p><b>Already have an account? Login <a href="{{ url_for('login') }}"><u>here</u></a></b></p>
     </form>
 {% endblock %}

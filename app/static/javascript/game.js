@@ -127,7 +127,7 @@ function startGame() {
 }
 
 function resetGame() {
-  time_left = 10; // changed to lower number for testing
+  time_left = 60; // changed to lower number for testing
   time_passed = 0;
   errors = 0;
   total_errors = 0;
@@ -161,9 +161,11 @@ function contentChange() {
     words.forEach(function(){
         const randomNumberW2 = getRandomNumberWords();
         const item = (words[randomNumberW2]);
-        mystring += item +' ';
-    });
-    return mystring;
+        mystring += item +' ';}
+    );
+    thirtyWords = mystring.split(' ').slice(0, 30);
+    thirtystring = thirtyWords.toString().replace(/,/g, ' ');
+    return (thirtystring + ' ');
 };
 
 // some bugs to fix: wpm still counts even through there is error
