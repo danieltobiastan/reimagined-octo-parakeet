@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Not Authorised</title>
+{% endblock %}
+
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+{% endblock %}
+
+{% block content %}
+<h1>Not Authorised</h1>
+<p>Please register.</p>
+{% endblock %}

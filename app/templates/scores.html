@@ -1,13 +1,48 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Scores</title>
+    <title>Scores</title>
+{% endblock %}
+
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/scores.css') }}">
 {% endblock %}
 
 {% block content %}
     <body>
+        <h1>Scores</h1>
         <div class='container'>
-            <h1>Scores</h1>
+            <table id='records'>
+                <caption>Your Top 10 Scores</caption>
+                <tr>
+                    <th>Username</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                </tr>
+            {% for score in myScore %}
+                <tr>
+                    <td>{{ score.username }}</td>
+                    <td>{{ score.score  }}</td>
+                    <td>{{ score.accuracy }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            <table id='global'>
+                    <caption>Top 10 Global Scores</caption>
+                    <tr>
+                        <th>Username</th>
+                        <th>WPM</th>
+                        <th>Accuracy</th>
+                    </tr>
+                {% for score in globaltop10 %}
+                    <tr>
+                        <td>{{ score.username }}</td>
+                        <td>{{ score.score  }}</td>
+                        <td>{{ score.accuracy }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
         </div>
     </body>
 {% endblock %}
