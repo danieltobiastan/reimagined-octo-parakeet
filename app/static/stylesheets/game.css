@@ -62,10 +62,11 @@ body {
   word-spacing: 4px;
   margin: 10px;
   height: 80px;
-  width: 60%;
-  font-size: 1rem;
+  width: 40%;
+  font-size: 1.45rem;
   padding: 10px;
   line-height: 1.4;
+
 }
 
 .correct{
@@ -95,11 +96,11 @@ body {
 
 .input_box {
   height: 100%;
+  border: none;
   background-color: transparent;
   color: transparent;
-  height:1px;
-  width:1px;
   align-items: center;
+  overflow: hidden;
 }
 
 textarea:focus, input:focus{
