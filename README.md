@@ -45,6 +45,13 @@ The user is able to click on the icons at the top of the page to navigate betwee
 This webpage combines client-side and server-side programming techniques to enhance the user experience.
 a template was built using flask, a python based web app framework. Flask connects the html, javascript and css with a database, and login and register forms. This allows the user to view their scores as well as a leaderboard of the top global scores.
 
+## Testing
+Constant revision of code by group members allowed us to keep an efficient, well written and succinct product throughout. Branches were constructed where the work was divided between group members, with it being merged together regularly at our group meetings via zoom.
+
+Some basic unittests were written to test password hashing and whether or not information was being accepted into the database. 
+
+to run the test cases: _python test.py <filename>_ 
+
 ## Contributors
 - Daniel Tan (22684196)
 - Callum Brown (22985036)
