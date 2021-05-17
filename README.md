@@ -2,15 +2,6 @@
 **remagined-octo-parakeet**
 
 ## key.stroke
-<<<<<<< HEAD
-a minimalistic typing game designed to test and train speed and accuracy under time pressure.
-
-## contributors
-Daniel Tan
-Callum Brown
-Shaobo Zhang
-Ye Liu
-=======
 ![image](https://github.com/danieltobiastan/reimagined-octo-parakeet/blob/frontpagestyle/images/frontpage.jpg)
 
 a minimalistic typing game designed to test and train speed and accuracy under time pressure.
@@ -59,4 +50,3 @@ a template was built using flask, a python based web app framework. Flask connec
 - Callum Brown (22985036)
 - Shaobo Zhang (22133027)
 - Ye Liu (22560064)
->>>>>>> 4bbfc55f3382466605721cdd58c08d6a3cd4473b
