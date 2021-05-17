@@ -21,3 +21,8 @@ a, a:hover {
     text-decoration: none
   }
 
+body {
+    background-color:  rgb(14, 36, 56);
+    color: white;
+    font-family: 'Anonymous Pro', monospace;
+}
