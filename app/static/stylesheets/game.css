@@ -9,8 +9,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
-  margin-top: 8cm
 }
 
 .title {
@@ -64,8 +62,8 @@ body {
   word-spacing: 4px;
   margin: 10px;
   height: 80px;
-  width: 30%;
-  font-size: 1.4rem;
+  width: 60%;
+  font-size: 1rem;
   padding: 10px;
   line-height: 1.4;
 }
@@ -84,7 +82,6 @@ body {
   font-size: 1rem;
   font-family: 'Anonymous Pro', monospace;
   padding: 12px 15px;
-  margin-top: 15px;
   border: 0px;
   color: rgb(128, 185, 238);
   background-color: rgb(14, 36, 56);
@@ -97,13 +94,14 @@ body {
 }
 
 .input_box {
-  background-color: rgba(0, 0, 0, 0);
-  color:rgba(0, 0, 0, 0);
+  height: 100%;
+  background-color: transparent;
+  color: transparent;
+  height:1px;
+  width:1px;
   align-items: center;
-  border: 0;
-  overflow: hidden;
 }
 
 textarea:focus, input:focus{
-    outline: 0px none transparent;
+    outline: none;
 }

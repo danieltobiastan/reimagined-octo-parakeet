@@ -41,7 +41,7 @@
             <span style='color: red'>[{{error}}]</span>
             {% endfor %}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p class="submit">{{ form.submit() }}</p>
         <p><b>Already have an account? Login <a href="{{ url_for('login') }}"><u>here</u></a></b></p>
     </form>
 {% endblock %}

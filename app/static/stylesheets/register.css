@@ -5,26 +5,21 @@ body {
   font-family: 'Anonymous Pro', monospace; 
 }
 
-label {
-  margin: 4px;
-}
-
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input:-webkit-autofill {
+  background-color: rgb(14, 36, 56);
   border: 1px solid rgb(128, 185, 238);
   border-radius: 3px 3px 3px 3px;
   padding: 4px;
+  color: rgb(128, 185, 238);
+  font-family: 'Anonymous Pro', monospace;
+}
+
+input[type="submit"] {
+  border: 1px solid rgb(128, 185, 238);
+  border-radius: 3px 3px 3px 3px;
+  padding: 6px;
   background-color: rgb(14, 36, 56);
   color: rgb(128, 185, 238);
   font-family: 'Anonymous Pro', monospace;
 }
 
-input[type=button] {
-  font-family: 'Anonymous Pro', monospace;
-  background-color: rgb(14, 36, 56);
-  color: rgb(128, 185, 238);
-  padding: 5px;
-}
-
-input[type=button]:hover {
-  font-weight: bold;
-}
