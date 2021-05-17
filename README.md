@@ -50,8 +50,10 @@ Constant revision of code by group members allowed us to keep an efficient, well
 
 Some basic unittests were written to test password hashing and whether or not information was being accepted into the database. 
 
-to run the test cases: _python test.py <filename>_ 
+to run the test cases: _python test.py 'filename'_ 
 
+Selenium was briefly used to assure firefox and microsoft edge browsers can run the webpage to an acceptable standard.
+  
 ## Contributors
 - Daniel Tan (22684196)
 - Callum Brown (22985036)
