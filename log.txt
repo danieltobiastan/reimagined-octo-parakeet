@@ -1,0 +1,258 @@
+commit 6ece5dbcdccf340beac149e6837d6960e296bdac
+Author: callumbrown01 <71712538+callumbrown01@users.noreply.github.com>
+Date:   Mon May 17 17:00:51 2021 +0800
+
+    Update README.md
+
+commit 68eb090afe6a99e3c87aa3db0d77898c8238e5d6
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 16:57:32 2021 +0800
+
+    added credit styling
+
+commit 2d2a110125baa726ed83943a1eb21c56ad9d2aa0
+Merge: 4046662 f01a4df
+Author: danieltobiastan <82879771+danieltobiastan@users.noreply.github.com>
+Date:   Mon May 17 16:35:24 2021 +0800
+
+    Merge pull request #3 from danieltobiastan/frontpagestyle
+    
+    final draft 1
+
+commit f01a4dfe36c91f6487e6a7dd774a8ce50b0860cf
+Merge: 819b455 bd51b2f
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 16:29:25 2021 +0800
+
+    Merge branch 'frontpagestyle' of https://github.com/danieltobiastan/reimagined-octo-parakeet into frontpagestyle
+
+commit 819b4550b9f77e0abe34d86a163a09969cfdcabd
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 16:25:30 2021 +0800
+
+    fixed textbox bug
+
+commit bd51b2f92a5fad976bd836c64b90be1851710304
+Merge: 065f417 0fffe75
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 16:24:03 2021 +0800
+
+    Merge branch 'frontpagestyle' of https://github.com/danieltobiastan/reimagined-octo-parakeet into frontpagestyle
+
+commit 065f417c682a470f8c537341e589b1216031695f
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 16:23:41 2021 +0800
+
+    requirements.txt
+
+commit 0fffe7538a17645759a33c6ce362052a34a307aa
+Merge: a3cb73c 6af587f
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 16:13:53 2021 +0800
+
+    fixed css ons cores
+
+commit a3cb73c789c9d118d8e45ce393b4b12b4f5cbb41
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 16:05:18 2021 +0800
+
+    fixed css on score and user
+
+commit 6af587fb2c17997566253f2d89484aab37051d43
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 16:00:58 2021 +0800
+
+    login autofill css
+
+commit 2147daa648f900782615b0cc680b7bcd77949d26
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 15:52:22 2021 +0800
+
+    minor changes
+
+commit 3f689c6b48c59d302439ca6dbe5c112d74abfa0b
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 14:34:10 2021 +0800
+
+    fixed record score bug
+
+commit 9d36841bee48584331543582656e49f9e92a89b0
+Merge: bb4d4ef 8a8ae90
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 14:33:19 2021 +0800
+
+    Merge branch 'frontpagestyle' of https://github.com/danieltobiastan/reimagined-octo-parakeet into frontpagestyle
+
+commit bb4d4ef51fc92a8addea4ebbe10ec1aa0e631c1e
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 17 14:28:14 2021 +0800
+
+    fixed white box
+
+commit 8a8ae908b57495cb7bae8ed8467188d02bf0eb71
+Merge: 021c561 f949ac2
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 14:22:41 2021 +0800
+
+    Merge branch 'frontpagestyle' of https://github.com/danieltobiastan/reimagined-octo-parakeet into frontpagestyle
+
+commit 021c56101d8a7b3bdad6f2cfe5a0f3f85cbae8e8
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 14:22:26 2021 +0800
+
+    Update frontpage.jpg
+
+commit f949ac2c0b51a2fb32d6669a5cd55fb27f040960
+Author: callumbrown01 <71712538+callumbrown01@users.noreply.github.com>
+Date:   Mon May 17 14:13:52 2021 +0800
+
+    Update README.md
+
+commit cec7d8fd2d3f0bcf46803e3929fd9142ce14919e
+Merge: 8676d27 4bbfc55
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 14:12:43 2021 +0800
+
+    Update README.md
+
+commit 8676d277ac8dbe17e0aa421d3448a2282e3a3309
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 14:09:32 2021 +0800
+
+    added readme images
+
+commit 4bbfc55f3382466605721cdd58c08d6a3cd4473b
+Author: callumbrown01 <71712538+callumbrown01@users.noreply.github.com>
+Date:   Mon May 17 14:08:52 2021 +0800
+
+    Update README.md
+
+commit 62b8b26483a8eb90b94bdc194b2bcc1ad39cb8e0
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 14:04:48 2021 +0800
+
+    added tutorial images
+
+commit 6e8bfe29a7652fdabdb3dadd8db320173ac88678
+Author: callumbrown01 <71712538+callumbrown01@users.noreply.github.com>
+Date:   Mon May 17 13:26:15 2021 +0800
+
+    Create README.md
+
+commit 4a8c1e189eb6c8771032535b8af777d2cf281b97
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 13:25:37 2021 +0800
+
+    Create frontpage.jpg
+
+commit 1ecfa9a62b02592e5dcc4c0eb2c109581cd86bad
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Mon May 17 02:16:36 2021 +0800
+
+    finalised front page
+
+commit e7560b76901f65d5e81a93c0767ea0c7a9a4aba2
+Author: YeLiuGit <83648214+YeLiuGit@users.noreply.github.com>
+Date:   Sun May 16 22:25:54 2021 +0800
+
+    Update base.html
+
+commit b4210715b2fd442a959f999c0268be0a5df14526
+Author: YeLiuGit <83648214+YeLiuGit@users.noreply.github.com>
+Date:   Sun May 16 22:19:15 2021 +0800
+
+    Update base.html
+
+commit 361624f429f0ffb29b8a0513f56312ed610a9874
+Merge: 1cf00b2 310aeb2
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Sun May 16 22:09:21 2021 +0800
+
+    added homepage, 404 errors, global scores
+
+commit 1cf00b2b2841ae6e823a8cea97584c60e8c2759a
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Sun May 16 22:00:34 2021 +0800
+
+    scroll fix, added homepage, fixed unauthorised access, global scores
+
+commit 310aeb29bc95712de99163fa8e7aa7902c66d3a5
+Author: callumbrown01 <callum.brown01@iinet.net.au>
+Date:   Sun May 16 21:11:39 2021 +0800
+
+    basic styling
+
+commit 0d2e9e2db440b2b3f685d75397ea8ec89be95500
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Sun May 16 18:43:16 2021 +0800
+
+    frontpage styling
+
+commit 02d476f97a7c6bd1d2a28f4e767dce6632810182
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Sat May 15 20:00:19 2021 +0800
+
+    fixed game bug
+
+commit b12bba3ff735138e93e46970b88fba54c6d530c7
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Sat May 15 19:58:43 2021 +0800
+
+    table added for top 10 scores, sumit to edit css
+
+commit 1027a9f6b9967634d3502b72259aa144595198bd
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Fri May 14 16:52:04 2021 +0800
+
+    high score bug fix
+
+commit fc8c10e927593c32d9185fc3d219ed8f0d1160e7
+Merge: f3b6eca 8ef7f37
+Author: danieltobiastan <82879771+danieltobiastan@users.noreply.github.com>
+Date:   Fri May 14 16:47:02 2021 +0800
+
+    Merge pull request #1 from danieltobiastan/backend
+    
+    Backend
+
+commit 8ef7f37288651651ed1f155374dab9789ad2c6ef
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Fri May 14 16:38:47 2021 +0800
+
+    high score
+
+commit 48df6e38f71f3dd28bbdd9890a8164249066f48c
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Fri May 14 16:16:45 2021 +0800
+
+    score page done (integration with db)
+
+commit d50e8308237445e188cb4d860b36d2ef9cad97ac
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Thu May 13 22:39:19 2021 +0800
+
+    score database integration
+
+commit f3b6eca98650e0e07fc0a56ab39401db9f92bf29
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Thu May 13 14:37:54 2021 +0800
+
+    updated db and adjusted minor attr of game
+
+commit 51a53ffc72ecbe03c358eee98f4f10e325d9ac8b
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Wed May 12 13:15:15 2021 +0800
+
+    random words integration + comments
+
+commit 99420cdab1d5f3f3ee6794e359895d36dff9188a
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Tue May 11 00:26:40 2021 +0800
+
+    intergrated back end with game
+
+commit 4046662c745ab04bd13c63bc61a51912bb51005b
+Author: Daniel Tobias Tan <dtyw25@gmail.com>
+Date:   Mon May 10 20:39:12 2021 +0800
+
+    init
