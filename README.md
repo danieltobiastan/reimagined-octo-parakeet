@@ -17,7 +17,7 @@ to activate virtual environment (Windows): _venv\Scripts\activate_
 
 to activate virtual environment (Mac/Linux): _source venv\Scripts\activate_
 
-from the virtual environment, the following python packages must be installed using: _pip install 'packagename'_
+from the virtual environment, the following python packages (requirements.txt) must be installed using: _pip install 'packagename'_
 
 - _flask_
 - _flask-wtf_
@@ -44,6 +44,8 @@ The user is able to click on the icons at the top of the page to navigate betwee
 ## Development
 This webpage combines client-side and server-side programming techniques to enhance the user experience.
 a template was built using flask, a python based web app framework. Flask connects the html, javascript and css with a database, and login and register forms. This allows the user to view their scores as well as a leaderboard of the top global scores.
+
+We began by working through flask tutorials to build a base for our project, upon which we built javascript and html for the main and base pages. Linking the javascript to the database via flask was a milestone which allowed us to begin working on style for the page. We brainstormed what we wanted the page to look like, and decided on a simplistic look. After the construction of a presentable webpage, we wrote some basic test cases and played around trying to find bugs which were quickly ironed out.
 
 ## Testing
 Constant revision of code by group members allowed us to keep an efficient, well written and succinct product throughout. Branches were constructed where the work was divided between group members, with it being merged together regularly at our group meetings via zoom.
