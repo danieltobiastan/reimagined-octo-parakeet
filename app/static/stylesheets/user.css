@@ -2,9 +2,8 @@ body {
     background-color: rgb(14, 36, 56);
     color: rgb(128, 185, 238);
     font-family: 'Anonymous Pro', monospace; 
-    text-align: center
+    text-align: center;
 }
-
 
 table, th, td {
     padding: 5px;
@@ -14,12 +13,15 @@ td {
     padding: 10px;
 }
 
-#global, #records {
-    float: left;
+#summary, #scores {
+    padding: 1em;
+    width: 60%
 }
 
 .container {
-    padding: 20px;
+    margin: 0 auto;
+    width: 40%;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }

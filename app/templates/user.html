@@ -6,16 +6,14 @@
 
 {% block head %} 
 <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
-<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/scores.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/user.css') }}">
 {% endblock %}
 
 {% block content %}
     <body>
+        <h1>Scores</h1>
+        <h2>{{ username }}</h2>
         <div class='container'>
-            <h1>Scores</h1>
-            <h2>{{ username }}</h2>
-        </div>
-
         <table id='summary'>
             <caption>Summary</caption>
             <tr>
@@ -46,5 +44,6 @@
                 <td>{{ score.accuracy }}</td>
         {% endfor %}
         </table>
+    </div>
     </body>
 {% endblock %}
