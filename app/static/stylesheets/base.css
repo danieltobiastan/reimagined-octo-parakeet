@@ -8,9 +8,12 @@
 }
 
 .logo {
-    color: rgb(128, 185, 238);
-    font-size: 25px;
-    margin: 0 0 0 auto;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px
 }
 
 a, a:hover {

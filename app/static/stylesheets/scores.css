@@ -1,28 +1,25 @@
 body {
     background-color: rgb(14, 36, 56);
     color: rgb(128, 185, 238);
-    text-align: center;
     font-family: 'Anonymous Pro', monospace; 
+    text-align: center
+}
+
+
+table, th, td {
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+#global, #records {
+    float: left;
 }
 
 .container {
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.records, .global {
-    margin: 8px;
-    padding: 6px;
-    flex: 50%;
-}
-
-th {
-    height: 15px;
+    justify-content: center;
 }

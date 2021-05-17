@@ -25,7 +25,7 @@ let read_me = document.querySelector(".readme")
 let user_name = document.getElementById("username")
 let user_id = document.getElementById("userid")
 
-let time_left = 15;
+let time_left = 60;
 let time_passed = 0;
 let total_errors = 0;
 let errors = 0;
@@ -132,7 +132,7 @@ function startGame() {
 }
 
 function resetGame() {
-  time_left = 3; // changed to lower number for testing
+  time_left = 60; // changed to lower number for testing
   time_passed = 0;
   errors = 0;
   total_errors = 0;

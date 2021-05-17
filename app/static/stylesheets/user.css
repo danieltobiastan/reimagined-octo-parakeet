@@ -1,11 +1,27 @@
 body {
     background-color: rgb(14, 36, 56);
     color: rgb(128, 185, 238);
-    text-align: center;
     font-family: 'Anonymous Pro', monospace; 
+    text-align: center;
 }
 
-table {
-    margin-left: auto;
-    margin-right: auto;
+table, th, td {
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+#summary, #scores {
+    padding: 1em;
+    width: 60%
+}
+
+.container {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
