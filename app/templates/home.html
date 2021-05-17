@@ -9,7 +9,15 @@
 <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/game.css') }}">
 {% endblock %}
 
-{% block content %}           
+{% block content %}
+    {% if current_user.is_anonymous %}
+        <h1>Welcome to key.stroke!</h1>
+        <p>A typing game</p>
+    {% else %}
+        <p>Welcome back,</p>
+        <p id="username">{{ current_user.username }}</p>
+        <h3 hidden id="userid">{{ current_user.id }}</h3>
+    {% endif %}           
     <body>
         <div class="container">
           <div class="border">
