@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(14, 36, 56);
+  color: rgb(128, 185, 238);
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.timer, .errors,
+.accuracy, .cpm, .wpm {
+  color: rgb(128, 185, 238);
+  height: 40px;
+  width: 60px;
+  margin: 8px;
+  padding: 5px;
+}
+
+.head {
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10px;
+  color: rgb(128, 185, 238);
+  padding: 2px;
+}
+
+.errors{
+  color: rgb(230, 126, 126);
+}
+.wpm{
+  color: rgb(231, 204, 114);
+}
+.wpm  {
+  display: none;
+}
+
+.init_time, .init_errors,
+.init_accuracy, .init_wpm {
+  font-size: 35px;
+}
+
+.content {
+  background-color: rgb(14, 36, 56);
+  color: rgb(128, 185, 238);
+  word-spacing: 4px;
+  margin: 10px;
+  height: 80px;
+  width: 40%;
+  font-size: 1.45rem;
+  padding: 10px;
+  line-height: 1.4;
+
+}
+
+.correct{
+  color: rgb(238, 217, 158);
+}
+.incorrect{
+  color:rgb(235, 137, 137);
+  text-decoration: underline;
+}
+
+.restart {
+  display: block;
+  background-color: rgb(128, 185, 238);
+  font-size: 1rem;
+  font-family: 'Anonymous Pro', monospace;
+  padding: 12px 15px;
+  border: 0px;
+  color: rgb(128, 185, 238);
+  background-color: rgb(14, 36, 56);
+  border-radius: 3px 3px 3px 3px;
+  width: 100%;
+}
+
+.restart:hover {
+  font-weight: bolder;
+}
+
+.input_box {
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  align-items: center;
+  overflow: hidden;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Login</title>
+    <title>Login</title>
+{% endblock %}
+
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/register.css') }}">
 {% endblock %}
 
 {% block content %}
     <h1>Sign In</h1>
-    <p>New User? <a href="{{ url_for('register') }}"><b>Register Here</b></a></p>
+    <p>New User?<b> Register <a href="{{ url_for('register') }}"><u>Here</u></b></a></p>
     <form action="/login" method="POST" novalidate>
         {{ form.hidden_tag() }}
         <p>

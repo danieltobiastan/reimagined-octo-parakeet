@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Register</title>
+    <title>Register</title>
+{% endblock %}
+
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/register.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -36,6 +41,7 @@
             <span style='color: red'>[{{error}}]</span>
             {% endfor %}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p class="submit">{{ form.submit() }}</p>
+        <p><b>Already have an account? Login <a href="{{ url_for('login') }}"><u>here</u></a></b></p>
     </form>
 {% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Speed Tester!</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="title">Typing Speed Tester!</div><hr>
+    <div class="border">
+    <div class="header">
+
+      <div class="wpm">
+        <div class="head">Words/min</div>
+        <div class="init_wpm">100</div>
+      </div>
+      
+      <div class="errors">
+        <div class="head">Errors</div>
+        <div class="init_errors">0</div>
+      </div>
+      
+      <div class="timer">
+        <div class="head">Time(s)</div>
+        <div class="init_time">60</div>
+      </div>
+      
+      <div class="accuracy">
+        <div class="head">Accuracy(%)</div>
+        <div class="init_accuracy">100</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="content" style="display: block;">
+      Click on the area below to start 
+    </div>
+     <textarea class="input_box" placeholder="Start typing..." oninput="textInput()"
+      onfocus="startGame()"></textarea>
+    <div>
+      <button class="restart" onclick="resetgame()">Restart</button>
+    </div>
+    </div>
+
+   
+</body>
+<script src="index.js"></script>
+</html>

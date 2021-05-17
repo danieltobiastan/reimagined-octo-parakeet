@@ -1,10 +1,63 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Typing - Home</title>
+    <title>key.stroke</title>
 {% endblock %}
 
-{% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-    <p>Start game</p>
+{% block head %} 
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/base.css') }}">
+<link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='stylesheets/game.css') }}">
+{% endblock %}
+
+{% block content %}   
+    <body>
+        {% if current_user.is_anonymous %}
+          <h1>Welcome to key.stroke!</h1>
+          <p>A typing game</p>
+        {% else %}
+          <p>Welcome back,</p>
+          <p id="username">{{ current_user.username }}</p>
+          <h3 hidden id="userid">{{ current_user.id }}</h3>
+        {% endif %}        
+        <div class="container">
+          <div class="border">
+          <div class="header">
+      
+            <div class="wpm">
+              <div class="head">Last WPM</div>
+              <div class="init_wpm">100</div>
+            </div>
+            
+            <div class="errors">
+              <div class="head">Errors</div>
+              <div class="init_errors">0</div>
+            </div>
+            
+            <div class="timer">
+              <div class="head">Time(s)</div>
+              <div class="init_time">60</div>
+            </div>
+            
+            <div class="accuracy">
+              <div class="head">Accuracy(%)</div>
+              <div class="init_accuracy">0</div>
+            </div>
+          </div>
+          </div>
+      
+          <div class="content" style="display: block;">
+            Click 'Begin' to start.
+          </div>
+
+          <div>
+            <textarea class="input_box" oninput="textInput()" style="resize: none;"></textarea>
+            <button class="restart" onclick="startGame(); setFocusToTextBox();" style="line-height:1.4em">Begin<br>[tab+enter]</button> 
+          </div>
+        </div>
+      </body>
+      <script src="{{url_for('static', filename='javascript/game.js')}}"></script>
+    {% if current_user.is_anonymous %}
+      <p><a href="{{ url_for('login') }}"><u>Login</u></a> to save results</p>
+    {% else %}
+    {% endif %}
 {% endblock %}
