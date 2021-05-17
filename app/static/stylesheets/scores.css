@@ -20,11 +20,27 @@ td {
     padding: 5px;
 }
 
-#summary, #records {
+#records {
     margin: 30px auto;
     padding: 3cm;
+    float: left
+}
+
+#summary {
+    margin: 30px auto;
+    padding: 3cm;
+    float: right;
 }
 
 .container {
-  column-count: 2;
+    width: 30%;
+    left:0;
+  right:0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+
+  background: transparent;
 }

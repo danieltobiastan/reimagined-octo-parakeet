@@ -111,6 +111,7 @@ function submitScore() {
     accuracy: accuracy_text.innerText,
     user_id: user_id.innerText
   }];
+  
   fetch(`${window.origin}/scoreupload`, {
     method: "POST",
     credentials: "include",
@@ -131,7 +132,7 @@ function startGame() {
 }
 
 function resetGame() {
-  time_left = 15; // changed to lower number for testing
+  time_left = 3; // changed to lower number for testing
   time_passed = 0;
   errors = 0;
   total_errors = 0;
@@ -142,7 +143,7 @@ function resetGame() {
   clearInterval(timer);
   input_box.disabled = false;
   input_box.value = "";
-  accuracy_text.textContent = 100;
+  accuracy_text.textContent = 0;
   timer_text.textContent = time_left;
   error_text.textContent = 0;
   restart_btn.style.display = "block";
@@ -167,10 +168,8 @@ function contentChange() {
         const item = (words[randomNumberW2]);
         mystring += item +' ';}
     );
-    thirtyWords = mystring.split(' ').slice(0, 30);
+    thirtyWords = mystring.split(' ').slice(0, 34);
     thirtystring = thirtyWords.toString().replace(/,/g, ' ');
     return (thirtystring + ' ');
 };
 
-// some bugs to fix: wpm still counts even through there is error
-//  can we change the textbox

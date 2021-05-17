@@ -32,7 +32,7 @@
             
             <div class="accuracy">
               <div class="head">Accuracy(%)</div>
-              <div class="init_accuracy">100</div>
+              <div class="init_accuracy">0</div>
             </div>
           </div>
           </div>
@@ -40,11 +40,12 @@
           <div class="content" style="display: block;">
             Click 'Begin' to start.
           </div>
-          </div>
+
           <div>
-            <button class="restart" onclick="startGame(); setFocusToTextBox();">Begin</button> 
+            <textarea class="input_box" oninput="textInput()" style="resize: none;"></textarea>
+            <button class="restart" onclick="startGame(); setFocusToTextBox();" style="line-height:1.4em">Begin<br>[tab+enter]</button> 
           </div>
-          <textarea class="input_box" oninput="textInput()" style="display: none"></textarea>
+        </div>
       </body>
       <script src="{{url_for('static', filename='javascript/game.js')}}"></script>
     {% if current_user.is_anonymous %}
