@@ -5,42 +5,24 @@ body {
     font-family: 'Anonymous Pro', monospace; 
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
 }
 
-table, th, td {
-    border-collapse: collapse;
-    padding: 5px;
+.records, .global {
+    margin: 8px;
+    padding: 6px;
+    flex: 50%;
 }
 
-td {
-    padding: 5px;
-}
-
-#records {
-    margin: 30px auto;
-    padding: 3cm;
-    float: left
-}
-
-#summary {
-    margin: 30px auto;
-    padding: 3cm;
-    float: right;
-}
-
-.container {
-    width: 30%;
-    left:0;
-  right:0;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  position: absolute;
-
-  background: transparent;
+th {
+    height: 15px;
 }
