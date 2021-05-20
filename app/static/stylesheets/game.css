@@ -62,11 +62,11 @@ body {
   word-spacing: 4px;
   margin: 10px;
   height: 80px;
-  width: 40%;
+  width: 60%;
   font-size: 1.45rem;
   padding: 10px;
   line-height: 1.4;
-
+  margin-bottom: 10px;
 }
 
 .correct{
@@ -88,6 +88,7 @@ body {
   background-color: rgb(14, 36, 56);
   border-radius: 3px 3px 3px 3px;
   width: 100%;
+  margin: 10px;
 }
 
 .restart:hover {
@@ -101,6 +102,7 @@ body {
   color: transparent;
   align-items: center;
   overflow: hidden;
+  margin: 10px;
 }
 
 textarea:focus, input:focus{
